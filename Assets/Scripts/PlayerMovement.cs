@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Floor Detection")]
     [SerializeField] LayerMask floorMask;
     bool isOnFloor;
-    float floorDistcance = 0.4f;
+    float floorDistcance = 0.6f;
     RaycastHit slopeHit;
 
     //all other variables
@@ -79,14 +79,24 @@ public class PlayerMovement : MonoBehaviour
     //Update various conditions per frame
     private void Update()
     {
-        isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 1, 0), floorDistcance,floorMask); //constant check for collision with "floor"
+        isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
         
         PlayerInput();
         ControlDrag();
 
+        /* //DEBUGGING CHECKS
+        if (isOnFloor)
+        { 
+            print("FLOOR");
+        }
+        
+        if (OnSlope())
+        { 
+            print("SLOPE");
+        }*/
 
         //implementation of various function in movement
-        if(Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
+        if (Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
         {
             Jump();
         }
@@ -206,7 +216,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (!isOnFloor)
         {
-            rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime;
+            rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 1.5f;
             //rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier* airMovementMultiplier, ForceMode.Acceleration);
         }
 
