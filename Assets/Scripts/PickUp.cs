@@ -11,12 +11,13 @@ public class PickUp : MonoBehaviour
 
     public float rangePickUp = 3f; //distance for pickup
     public float objectMovementSpeed = 200f; //speed of object once picked up
+    public float throwForce = 10f;
     private GameObject heldObject;
 
 
     void Update()
     {
-        if(Input.GetKeyDown(pickUpKey))
+        if (Input.GetKeyDown(pickUpKey))
         {
             if (heldObject == null)// if no object
             {
@@ -49,7 +50,7 @@ public class PickUp : MonoBehaviour
 
     void PickUpObject(GameObject pickUpObject)
     {
-        if (pickUpObject.GetComponent<Rigidbody>())//only works if object has rigid body
+        if (pickUpObject.GetComponent<Rigidbody>() && !pickUpObject.CompareTag("Player"))//only works if object has rigid body and is not player
         {
             Rigidbody objectRigidBody = pickUpObject.GetComponent<Rigidbody>();
             objectRigidBody.useGravity = false;
@@ -67,23 +68,20 @@ public class PickUp : MonoBehaviour
         heldRigidbody.useGravity = true;
         heldRigidbody.drag = 1;
         heldRigidbody.freezeRotation = false;
-        heldRigidbody.AddForce(transform.forward * 25f, ForceMode.Impulse);
+        heldRigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse);
 
         heldObject.transform.parent = null;
         heldObject = null;
     }
+}
 
     /* Usage
      * Add a GameObject child to the player camera
      * Set the object to a desired position infront of camera
      * add script to camera object
      * set child object as hold position variable
+     * 
+     * Ensure player is not grabable:
+     * set all player components (Player/... ; Player/Capsule ; etc) under the player tag
+     * player should no not be able to be grabbed thanks to line53* *may change
      */
-
-
-    /*Additional Notes
-     * Bug(s):
-     *      is currently possibly to pick up player object -> need to add check or layer to resolve
-     */
-
-}
