@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Floor Detection")]
     [SerializeField] LayerMask floorMask;
     bool isOnFloor;
-    float floorDistcance = 0.6f;
+    float floorDistcance = 0.5f;
     RaycastHit slopeHit;
 
     //all other variables
@@ -79,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
     //Update various conditions per frame
     private void Update()
     {
+        //isOnFloor = Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f);
         isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
         
         PlayerInput();

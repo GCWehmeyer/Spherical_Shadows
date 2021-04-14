@@ -57,6 +57,9 @@ public class PickUp : MonoBehaviour
             objectRigidBody.freezeRotation = true;
             objectRigidBody.drag = 5;
 
+            Collider pickUpObjectCollider = pickUpObject.GetComponent<Collider>();
+            pickUpObjectCollider.enabled = false;
+            
             objectRigidBody.transform.parent = holdPosition;
             heldObject = pickUpObject;
         }
@@ -64,12 +67,14 @@ public class PickUp : MonoBehaviour
 
     void DropThrowObject()
     {
+        Collider heldObjectCollider = heldObject.GetComponent<Collider>();
+        heldObjectCollider.enabled = true;
+
         Rigidbody heldRigidbody = heldObject.GetComponent<Rigidbody>();
         heldRigidbody.useGravity = true;
         heldRigidbody.drag = 1;
         heldRigidbody.freezeRotation = false;
-        heldRigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse);
-
+        heldRigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse);      
         heldObject.transform.parent = null;
         heldObject = null;
     }
