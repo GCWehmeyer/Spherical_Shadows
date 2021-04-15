@@ -5,7 +5,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     public Transform holdPosition;
-
+    public float ballScale = 4f;
     [Header("Keybinds")]
     [SerializeField] KeyCode pickUpKey = KeyCode.E;
 
@@ -52,6 +52,8 @@ public class PickUp : MonoBehaviour
     {
         if (pickUpObject.GetComponent<Rigidbody>() && !pickUpObject.CompareTag("Player"))//only works if object has rigid body and is not player
         {
+            pickUpObject.transform.localScale *= 1/ballScale;
+
             Rigidbody objectRigidBody = pickUpObject.GetComponent<Rigidbody>();
             objectRigidBody.useGravity = false;
             objectRigidBody.freezeRotation = true;
@@ -69,6 +71,9 @@ public class PickUp : MonoBehaviour
     {
         Collider heldObjectCollider = heldObject.GetComponent<Collider>();
         heldObjectCollider.enabled = true;
+
+        heldObject.transform.localScale *= ballScale;
+
 
         Rigidbody heldRigidbody = heldObject.GetComponent<Rigidbody>();
         heldRigidbody.useGravity = true;
