@@ -540,6 +540,7 @@ GameObject:
   - component: {fileID: 763036235}
   - component: {fileID: 763036234}
   - component: {fileID: 763036233}
+  - component: {fileID: 763036238}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -597,7 +598,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: efcbd2e8dab84764f8005c7131edb10a, type: 2}
+  - {fileID: 2100000, guid: f2735dc09a5b53641ba65ba813b6f488, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -625,7 +626,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 763036232}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
 --- !u!4 &763036237
 Transform:
   m_ObjectHideFlags: 0
@@ -635,11 +636,30 @@ Transform:
   m_GameObject: {fileID: 763036232}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.666, y: 0.195, z: 4.68}
-  m_LocalScale: {x: 0.3509722, y: 0.34464425, z: 0.34515572}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &763036238
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763036232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: cc633396b5f95da4b916357a5508ee4f, type: 3}
+  m_Controller: {fileID: 9100000, guid: db84090cafb9d1e4e8cba105245c828b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &908172930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,7 +1730,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 04652004be933ba41b4ac32ddd7f5eeb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15318,17 +15338,17 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 1895263531}
   m_IsSelectable: 1
-  m_SelectedFaces: 2f000000
+  m_SelectedFaces: 5f010000
   m_SelectedEdges:
-  - a: 190
-    b: 191
-  - a: 191
-    b: 188
-  - a: 188
-    b: 189
-  - a: 189
-    b: 190
-  m_SelectedVertices: bc000000be000000bf000000bd000000
+  - a: 1406
+    b: 1407
+  - a: 1407
+    b: 1404
+  - a: 1405
+    b: 1406
+  - a: 1404
+    b: 1405
+  m_SelectedVertices: 7e0500007f0500007c0500007d050000
 --- !u!4 &1993745251
 Transform:
   m_ObjectHideFlags: 0
