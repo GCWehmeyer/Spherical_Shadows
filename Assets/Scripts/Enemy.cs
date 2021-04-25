@@ -11,9 +11,9 @@ public class Enemy : MonoBehaviour
         ATTACK,
     }
     public State CurState;
-    public float Speed = .5f;
-    public float GoToDistance = 13;
-    public float AttackDistance = 1;
+    public float Speed = 1;
+    public float GoToDistance = 6;
+    public float AttackDistance = 2;
     public float AttackTimer = 2;
     public Transform Target;
     public string PlayerTag = "Player";
@@ -69,6 +69,12 @@ public class Enemy : MonoBehaviour
                 CurState = State.LOOKFOR;
                 return;
             }
+        }
+
+        if (Vector3.Distance(Target.position, transform.position) > GoToDistance)
+        {
+            CurState = State.LOOKFOR;
+            return;
         }
 
 
