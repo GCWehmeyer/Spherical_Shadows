@@ -54,8 +54,10 @@ public class PlayerMovement : MonoBehaviour
      */
     private bool OnFloor() 
     {
+        //array of raycasts? to check if touching "floor"
         Collider[] hitColliders = Physics.OverlapBox(transform.position, transform.localScale / 3f, Quaternion.Euler(0, 0, 0), floorMask);
         bool check = false;
+        //cycle through array >> if none true then not on floor, if just one, on floor
         for (int i = 0; i < hitColliders.Length; i++)
         {
             if (hitColliders[i]) 
@@ -71,8 +73,10 @@ public class PlayerMovement : MonoBehaviour
      */
     private bool OnSlope()
     {
+        //simple downward raycast check |
         if(Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight/2 +0.5f))
         {
+            //if the player is not at a 90' angle with the worlds level
             if (slopeHit.normal != Vector3.up)
             {
                 return true;
@@ -140,7 +144,8 @@ public class PlayerMovement : MonoBehaviour
         slopeMovementDirection = Vector3.ProjectOnPlane(movementDirection, slopeHit.normal); // used in slope detection
     }
 
-    private void FixedUpdate() //updates alongside physics engine
+    //updates alongside physics engine
+    private void FixedUpdate() 
     {
         MovePlayer();
     }
@@ -177,9 +182,15 @@ public class PlayerMovement : MonoBehaviour
      */
     void Crouch()
     {
+        //shink aspects of player
         transform.localScale = new Vector3(1, 0.5f, 1);
-        movementSpeed = 3f;
         playerHeight = playerHeight / 2;
+        
+        //reduce speed
+        movementSpeed = 3f;
+
+
+        //old code - kept for completions sake
         /*if (!crouchingState)
         {
             transform.localScale = new Vector3(1,0.5f,1);
@@ -197,9 +208,12 @@ public class PlayerMovement : MonoBehaviour
     }
     void unCrouch()
     {
+        //return normal player dimensions
         transform.localScale = new Vector3(1, 1f, 1);
-        movementSpeed = 8f;
         playerHeight = playerHeight * 2;
+
+        //increase speed
+        movementSpeed = 8f;
     }
 
     void Jump()
@@ -235,6 +249,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (!isOnFloor)
         {
+            //using velocity instead of force as allows for "smoother" falling
             rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 1.5f;
             //rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier* airMovementMultiplier, ForceMode.Acceleration);
         }

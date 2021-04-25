@@ -19,12 +19,14 @@ public class PickUp : MonoBehaviour
     {
         if (Input.GetKeyDown(pickUpKey))
         {
-            if (heldObject == null)// if no object
+            // if no object
+            if (heldObject == null)
             {
                 RaycastHit itemHit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out itemHit, rangePickUp))
                 {
-                    PickUpObject(itemHit.transform.gameObject);//picks up object with rigidbidy that is hit with the raycast
+                    //picks up object with rigidbidy that is hit with the raycast
+                    PickUpObject(itemHit.transform.gameObject);
                 }
             }
             else
@@ -35,13 +37,15 @@ public class PickUp : MonoBehaviour
 
         if (heldObject != null)
         {
-            MoveObject();//if holding an object, move it
+            //if holding an object, move it
+            MoveObject();
         }
     }
 
     void MoveObject()
     {
-        if (Vector3.Distance(heldObject.transform.position, holdPosition.position) > 0.1f)//move if hold_position is not where object is
+        //move if hold_position is not where object is
+        if (Vector3.Distance(heldObject.transform.position, holdPosition.position) > 0.1f)
         {
             Vector3 moveDirection = (holdPosition.position - heldObject.transform.position);
             heldObject.GetComponent<Rigidbody>().AddForce(moveDirection * objectMovementSpeed);
@@ -50,16 +54,22 @@ public class PickUp : MonoBehaviour
 
     void PickUpObject(GameObject pickUpObject)
     {
-        if (pickUpObject.GetComponent<Rigidbody>() && !pickUpObject.CompareTag("Player"))//only works if object has rigid body and is not player
+        //only works if object has rigid body and is not player
+        if (pickUpObject.GetComponent<Rigidbody>() && !pickUpObject.CompareTag("Player"))
         {
+            // finding all neccessary references
+            Rigidbody objectRigidBody = pickUpObject.GetComponent<Rigidbody>(); 
+            Collider pickUpObjectCollider = pickUpObject.GetComponent<Collider>();
+
+            //Shrink ball
             pickUpObject.transform.localScale *= 1/ballScale;
 
-            Rigidbody objectRigidBody = pickUpObject.GetComponent<Rigidbody>();
+            //disable various physics interactions
             objectRigidBody.useGravity = false;
             objectRigidBody.freezeRotation = true;
             objectRigidBody.drag = 5;
-
-            Collider pickUpObjectCollider = pickUpObject.GetComponent<Collider>();
+            //isKinamatic could replace???
+            
             pickUpObjectCollider.enabled = false;
             
             objectRigidBody.transform.parent = holdPosition;
@@ -69,17 +79,24 @@ public class PickUp : MonoBehaviour
 
     void DropThrowObject()
     {
-        Collider heldObjectCollider = heldObject.GetComponent<Collider>();
-        heldObjectCollider.enabled = true;
-
-        heldObject.transform.localScale *= ballScale;
-
-
+        // finding all neccessary references
         Rigidbody heldRigidbody = heldObject.GetComponent<Rigidbody>();
+        Collider heldObjectCollider = heldObject.GetComponent<Collider>();
+        
+        //Unshrink ball
+        heldObject.transform.localScale *= ballScale;
+        
+        //Re-enable physics interactions
         heldRigidbody.useGravity = true;
         heldRigidbody.drag = 1;
         heldRigidbody.freezeRotation = false;
+
+        heldObjectCollider.enabled = true;
+        
+        //Actual throw functionality
         heldRigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse);      
+        //AddRelativeForce() maybe????
+
         heldObject.transform.parent = null;
         heldObject = null;
     }

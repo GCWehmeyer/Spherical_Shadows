@@ -20,4 +20,7 @@ public class LinkObjectMovement : MonoBehaviour
  * ie eliminates mild stuuering/jittering
  * 
  * used to move one object along with another
+ * 
+ * offset vector can be used to have an object follow at a specific spot
+ * NOTE: Currently does not spply proper rotation
  */

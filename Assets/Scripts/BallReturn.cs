@@ -22,3 +22,8 @@ public class BallReturn : MonoBehaviour
     }
 
 }
+
+
+/*
+ Intended for debugging when collision checks fail on ball due to various issues
+ */
