@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed = 8f;
     float horizontalMovement;
     float verticalMovement;
-    
+
     Vector3 movementDirection;
     Vector3 slopeMovementDirection;
 
@@ -36,18 +36,35 @@ public class PlayerMovement : MonoBehaviour
     [Header("Friction/Drag")]
     float floorDrag = 6f;
     float airDrag = 1f;
-    
+
     //variables for ground-detection
     [Header("Floor Detection")]
     [SerializeField] LayerMask floorMask;
     bool isOnFloor;
-    float floorDistcance = 0.5f;
+    //float floorDistcance = 0.5f;
     RaycastHit slopeHit;
+
 
     //all other variables
     //[Header("Misc")]
     //bool crouchingState = false;
 
+    /*OnFloor() checks if player is on ground
+     * part of ground detection system
+     */
+    private bool OnFloor() 
+    {
+        Collider[] hitColliders = Physics.OverlapBox(transform.position, transform.localScale / 3f, Quaternion.Euler(0, 0, 0), floorMask);
+        bool check = false;
+        for (int i = 0; i < hitColliders.Length; i++)
+        {
+            if (hitColliders[i]) 
+            {
+                check = true;
+            }
+        }
+        return check;
+    }
 
     /*OnSlope() checks if player is on uneven ground
      * part of ground detection system
@@ -80,8 +97,9 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         //isOnFloor = Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f);
-        isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
-        
+        //isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
+        isOnFloor = OnFloor();
+
         PlayerInput();
         ControlDrag();
 

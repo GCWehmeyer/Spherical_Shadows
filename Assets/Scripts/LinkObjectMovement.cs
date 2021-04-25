@@ -5,10 +5,11 @@ using UnityEngine;
 public class LinkObjectMovement : MonoBehaviour
 {
     [SerializeField] Transform linkedObjectPosition;
-
+    public Vector3 offset = new Vector3(0, 0, 0);
+   
     void Update()
     {
-        transform.position = linkedObjectPosition.position;
+        this.transform.position = linkedObjectPosition.position + offset;
     }
 }
 
