@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bb7c49f2322054796b86a4e9ad588f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {fileID: 1277773093}
+  linkedObjectPosition: {fileID: 1246674164}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +853,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1246674164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4733874650527876300, guid: 9f1c9c20e0085d84d8c07d33e51d9fb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 596148356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272354322
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,12 +889,6 @@ Transform:
   m_Father: {fileID: 1826384572}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1277773093 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7881910974094771655, guid: 9f1c9c20e0085d84d8c07d33e51d9fb3,
-    type: 3}
-  m_PrefabInstance: {fileID: 596148356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1369015330
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bb7c49f2322054796b86a4e9ad588f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {fileID: 1608116713}
+  linkedObjectPosition: {fileID: 1608116713}
 --- !u!4 &1379399371
 Transform:
   m_ObjectHideFlags: 0
@@ -15338,17 +15338,9 @@ MonoBehaviour:
   assetGuid: 
   m_Mesh: {fileID: 1895263531}
   m_IsSelectable: 1
-  m_SelectedFaces: 5f010000
-  m_SelectedEdges:
-  - a: 1406
-    b: 1407
-  - a: 1407
-    b: 1404
-  - a: 1405
-    b: 1406
-  - a: 1404
-    b: 1405
-  m_SelectedVertices: 7e0500007f0500007c0500007d050000
+  m_SelectedFaces: 
+  m_SelectedEdges: []
+  m_SelectedVertices: 
 --- !u!4 &1993745251
 Transform:
   m_ObjectHideFlags: 0
