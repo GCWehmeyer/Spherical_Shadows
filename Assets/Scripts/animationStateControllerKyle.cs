@@ -11,6 +11,10 @@ public class animationStateControllerKyle : MonoBehaviour
     int isSneakingHash;
     int isJumpingHash;
     int isPickupHash;
+    int isStrafeLeftHash;
+    int isStrafeRightHash;
+    int isRunbackHash;
+
     //int isJumpingStillHash;
     //int isThrowHash;  
 
@@ -22,6 +26,10 @@ public class animationStateControllerKyle : MonoBehaviour
         isSneakingHash = Animator.StringToHash("isSneaking");
         isJumpingHash = Animator.StringToHash("isJumping");
         isPickupHash = Animator.StringToHash("isPickup");
+        isStrafeLeftHash = Animator.StringToHash("isLeftStrafe");
+        isStrafeRightHash = Animator.StringToHash("isRightStrafe");
+        isRunbackHash = Animator.StringToHash("isRunBack");
+
         //isJumpingStillHash = Animator.StringToHash("isJumpingStill");
         //isThrowHash = Animator.StringToHash("isThrow");   
     }
@@ -33,6 +41,10 @@ public class animationStateControllerKyle : MonoBehaviour
         bool isSneaking = animator.GetBool(isSneakingHash);
         bool isJumping = animator.GetBool(isJumpingHash);
         bool isPickup = animator.GetBool(isPickupHash);
+        bool isStrafeLeft = animator.GetBool(isStrafeLeftHash);
+        bool isStrafeRight = animator.GetBool(isStrafeRightHash);
+        bool isRunback = animator.GetBool(isRunbackHash);
+
         //bool isJumpingStill = animator.GetBool(isJumpingStillHash);     
         //bool isThrow = animator.GetBool(isThrowHash);
 
@@ -40,6 +52,9 @@ public class animationStateControllerKyle : MonoBehaviour
         bool sneakPressed = Input.GetKey("left ctrl");
         bool jumpPressed = Input.GetKey("space");
         bool pickupPressed = Input.GetKey("e");
+        bool leftStrafe = Input.GetKey("a");
+        bool rightStrafe = Input.GetKey("d");     
+        bool runBack = Input.GetKey("s");
 
         //RUNNING
         // if player is running
@@ -97,7 +112,44 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isPickupHash, false);
         }
 
+        //Strafe Left
+        if (!isStrafeLeft && leftStrafe)
+        {
+            //then set the isStrafeLeft boolean to be true
+            animator.SetBool(isStrafeLeftHash, true);
+        }
+        // if player is straffing and stops
+        if (isStrafeLeft && !leftStrafe)
+        {
+            //then set the isStrafeLeft boolean to be false
+            animator.SetBool(isStrafeLeftHash, false);
+        }
 
+        //Strafe Right
+        if (!isStrafeRight && rightStrafe)
+        {
+            //then set the isStrafeRight boolean to be true
+            animator.SetBool(isStrafeRightHash, true);
+        }
+        // if player is straffing and stops
+        if (isStrafeRight && !rightStrafe)
+        {
+            //then set the isStrafeRight boolean to be false
+            animator.SetBool(isStrafeRightHash, false);
+        }
+
+        //Run Backwards
+        if (!isRunback && runBack)
+        {
+            //then set the isisRunback boolean to be true
+            animator.SetBool(isRunbackHash, true);
+        }
+        // if player is running backwards and stops
+        if (isRunback && !runBack)
+        {
+            //then set the isisRunback boolean to be false
+            animator.SetBool(isRunbackHash, false);
+        }
 
         //JUMPING STANDING STILL
         //if (!isJumpingStill && jumpPressed)
