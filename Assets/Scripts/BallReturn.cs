@@ -19,6 +19,10 @@ public class BallReturn : MonoBehaviour
     void returnBall()
     {
         transform.position = holdPosition.position;
+        
+        //debugging code
+        /*Collider collider = GetComponent<Collider>();
+        collider.enabled = true;*/
     }
 
 }

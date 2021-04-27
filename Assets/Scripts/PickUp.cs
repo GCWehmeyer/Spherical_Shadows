@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    public Camera cam;
+    private float screenCenterX = Screen.width / 2;
+    private float screenCenterY = Screen.height / 2;
     public Transform holdPosition;
+    public Transform throwPosition;
     public float ballScale = 4f;
     [Header("Keybinds")]
     [SerializeField] KeyCode pickUpKey = KeyCode.E;
@@ -79,6 +83,16 @@ public class PickUp : MonoBehaviour
 
     void DropThrowObject()
     {
+        //move object to throwPosition
+        heldObject.transform.position = throwPosition.position;
+
+        //finding screen center and throw direction
+        //the last point of the vector is the distance away from the player the ball will travel wrt the camera plane
+        //currently a okayish mid range distance - automate value with a fucntion may be possible BUT highly costly
+        Vector3 screenCenter = cam.ScreenToWorldPoint(new Vector3(screenCenterX, screenCenterY, 5));
+        Vector3 throwDirection = screenCenter - heldObject.transform.position;
+
+
         // finding all neccessary references
         Rigidbody heldRigidbody = heldObject.GetComponent<Rigidbody>();
         Collider heldObjectCollider = heldObject.GetComponent<Collider>();
@@ -94,7 +108,8 @@ public class PickUp : MonoBehaviour
         heldObjectCollider.enabled = true;
         
         //Actual throw functionality
-        heldRigidbody.AddForce(transform.forward * throwForce, ForceMode.Impulse);      
+        //normalized to just get direction and not the full vector
+        heldRigidbody.AddForce(throwDirection.normalized * throwForce, ForceMode.Impulse);      
         //AddRelativeForce() maybe????
 
         heldObject.transform.parent = null;
