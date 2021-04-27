@@ -15,7 +15,7 @@ public class PickUp : MonoBehaviour
 
     public float rangePickUp = 3f; //distance for pickup
     public float objectMovementSpeed = 200f; //speed of object once picked up
-    public float throwForce = 10f;
+    public float throwForce = 5f;
     private GameObject heldObject;
 
 
@@ -109,8 +109,7 @@ public class PickUp : MonoBehaviour
         
         //Actual throw functionality
         //normalized to just get direction and not the full vector
-        heldRigidbody.AddForce(throwDirection.normalized * throwForce, ForceMode.Impulse);      
-        //AddRelativeForce() maybe????
+        heldRigidbody.AddForce(throwDirection.normalized * throwForce, ForceMode.Impulse);
 
         heldObject.transform.parent = null;
         heldObject = null;

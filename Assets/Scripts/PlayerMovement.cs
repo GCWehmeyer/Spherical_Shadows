@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     float playerHeight = 2f;
     Rigidbody rb;
+    public Camera playerCam;
+
 
     //Houses variables pertaining to movement and orirntation
     [Header("Movement")]
@@ -166,13 +168,17 @@ public class PlayerMovement : MonoBehaviour
      */
     void Dash()
     {
+        Vector3 screenCenter = playerCam.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 5));
+
         if (isOnFloor)
         {
-            rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier * 10f, ForceMode.Acceleration);
+            //rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier * 10f, ForceMode.Acceleration);
+            rb.velocity += movementDirection.normalized * 10f;
         }
         else
         {
-            rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier * 5f, ForceMode.Acceleration);
+            //rb.AddForce(screenCenter.normalized * movementSpeed * movementMultiplier * 5f, ForceMode.Acceleration);
+            rb.velocity += screenCenter.normalized * 10f;
         }
         
     }

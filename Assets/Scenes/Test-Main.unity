@@ -238,7 +238,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 580308534}
-  - component: {fileID: 580308535}
   m_Layer: 0
   m_Name: Throw_Position
   m_TagString: Player
@@ -253,27 +252,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580308533}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.338, y: 0.3, z: 0.627}
+  m_LocalRotation: {x: -0.9971149, y: 0.061010096, z: 0.027166845, w: -0.036078233}
+  m_LocalPosition: {x: 0.196, y: -0.165, z: -0.131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1841241872}
+  m_Father: {fileID: 1751325311}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &580308535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580308533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48bb7c49f2322054796b86a4e9ad588f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linkedObjectPosition: {fileID: 1094567375}
-  offset: {x: 0.2, y: 0.2, z: 0.2}
 --- !u!1001 &596148356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -899,12 +884,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1094567375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5238623466570555322, guid: 9f1c9c20e0085d84d8c07d33e51d9fb3,
-    type: 3}
-  m_PrefabInstance: {fileID: 596148356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1272354322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1003,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1751325311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2721297089971918801, guid: 9f1c9c20e0085d84d8c07d33e51d9fb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 596148356}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1772799311 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: f14b6f7503476eb4e9b2afc1cc05e719,
@@ -1090,6 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037f2c47c5ca44f47b1d82b7d8caa53c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCam: {fileID: 1841241874}
   movementSpeed: 6
   movementMultiplier: 10
   orientation: {fileID: 1272354323}
@@ -1179,7 +1165,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 908172931}
-  - {fileID: 580308534}
   m_Father: {fileID: 1379399371}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15424,7 +15409,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069306502}
   serializedVersion: 2
-  m_Mass: 0.75
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
