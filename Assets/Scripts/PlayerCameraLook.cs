@@ -49,7 +49,7 @@ public class PlayerCameraLook : MonoBehaviour
         xRotation -= mouseY * sensY * sensitivityMultiplier;
 
         //restricts camera movement to a 180'
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -90f, 60f);
     }
 
     

@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Houses variables pertaining to movement and orirntation
     [Header("Movement")]
-    public float movementSpeed = 8f;
+    public float movementSpeed = 6f;
     float horizontalMovement;
     float verticalMovement;
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform orientation;
 
     [Header("Jump")]
-    public float jumpForce = 10f;
+    public float jumpForce = 12.5f;
 
     //Keep track off all control keys
     [Header("Keybinds")]
@@ -169,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
     void Dash()
     {
         Vector3 screenCenter = playerCam.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 5));
+        Vector3 dashDirection = screenCenter - transform.position;
 
         if (isOnFloor)
         {
@@ -178,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             //rb.AddForce(screenCenter.normalized * movementSpeed * movementMultiplier * 5f, ForceMode.Acceleration);
-            rb.velocity += screenCenter.normalized * 10f;
+            rb.velocity += dashDirection.normalized * 10f;
         }
         
     }
@@ -219,7 +220,7 @@ public class PlayerMovement : MonoBehaviour
         playerHeight = playerHeight * 2;
 
         //increase speed
-        movementSpeed = 8f;
+        movementSpeed = 6f;
     }
 
     void Jump()
