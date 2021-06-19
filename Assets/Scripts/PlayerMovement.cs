@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
     [SerializeField] KeyCode dashKey = KeyCode.LeftShift; //StickyKeys is an issue - add delay to circumvent???
     [SerializeField] KeyCode walkKey = KeyCode.LeftControl;
+    [SerializeField] KeyCode resetKey = KeyCode.R;
 
 
     //Variables for friction/drag 
@@ -141,7 +143,11 @@ public class PlayerMovement : MonoBehaviour
         {
             unCrouch();
         }
-        
+        if (Input.GetKeyDown(resetKey))
+        {
+            ResetLevel();
+        }
+
 
         slopeMovementDirection = Vector3.ProjectOnPlane(movementDirection, slopeHit.normal); // used in slope detection
     }
@@ -262,4 +268,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
+
+    //Reset scene/level
+    void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }
