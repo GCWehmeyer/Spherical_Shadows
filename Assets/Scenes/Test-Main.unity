@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 2.598
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f14b6f7503476eb4e9b2afc1cc05e719, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1057,6 +1057,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7254cb27467a22f48823f43dbed6d572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1772799313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772799311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b877f00b9047746ae4e3a690084d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurState: 0
+  Speed: 1
+  GoToDistance: 6
+  AttackDistance: 2
+  AttackTimer: 2
+  Target: {fileID: 0}
+  PlayerTag: Player
 --- !u!1 &1826384571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,6 +1132,7 @@ MonoBehaviour:
   jumpKey: 32
   dashKey: 304
   walkKey: 306
+  resetKey: 114
   floorMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1275,7 +1295,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh14268
+  m_Name: pb_Mesh14492
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
