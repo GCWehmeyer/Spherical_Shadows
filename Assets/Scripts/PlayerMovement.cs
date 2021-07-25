@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Houses variables pertaining to movement and orirntation
     [Header("Movement")]
-    public float movementSpeed = 6f;
+    public float movementSpeed = 9.5f;
     float horizontalMovement;
     float verticalMovement;
 
@@ -23,10 +23,23 @@ public class PlayerMovement : MonoBehaviour
 
     public float movementMultiplier = 10f;
     //[SerializeField] float airMovementMultiplier = 0.25f;
+
+    [Header("Wallrun")]
+    bool isWallRunning = false;
     [SerializeField] Transform orientation;
+    [SerializeField] float distanceToWall = 1f;
+    [SerializeField] float slipFactor = 2f;
+    [SerializeField] float jumpForce_WallVersion = 20f;
+    bool leftWallCheck = false;
+    bool rightWallCheck = false;
+    RaycastHit leftHit;
+    RaycastHit rightHit;
+
+    [Header("Wallrun Camera Effects")]
+
 
     [Header("Jump")]
-    public float jumpForce = 12.5f;
+    public float jumpForce = 15f;
 
     //Keep track off all control keys
     [Header("Keybinds")]
@@ -93,6 +106,14 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+
+    //Checks to find a wall for wall running
+    private void FindWall()
+    {
+        leftWallCheck = Physics.Raycast(transform.position, -orientation.right, out leftHit,distanceToWall);
+        rightWallCheck = Physics.Raycast(transform.position, orientation.right, out rightHit,distanceToWall);
+    }
+
     //Set up player when instance is first loaded
     private void Start()
     {
@@ -110,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
         PlayerInput();
         ControlDrag();
+        FindWall();
 
         /* //DEBUGGING CHECKS
         if (isOnFloor)
@@ -123,6 +145,30 @@ public class PlayerMovement : MonoBehaviour
         }*/
 
         //implementation of various function in movement
+        
+        if(!isOnFloor)
+        {
+            print("Wall Running");
+            if (leftWallCheck)
+            {
+                print("LEFT - Wall Running");
+                BeginWallrunning();
+            }
+            else if(rightWallCheck)
+            {
+                print("RIGHT - Wall Running");
+                BeginWallrunning();
+            }
+            else 
+            {
+                EndWallrunning();
+            }
+        }
+        else
+        {
+            EndWallrunning();
+        }
+
         if (Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
         {
             Jump();
@@ -168,6 +214,37 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
+    /* BeginWallrunning() initialises the wallrunning for the player
+     */
+    void BeginWallrunning()
+    {
+        isWallRunning = true;
+        rb.useGravity = false;
+        rb.AddForce(Vector3.down * slipFactor, ForceMode.Force); //Makes only gravity effect be the "slip factor of all walls
+        
+        if(Input.GetKeyDown(jumpKey))
+        {
+            if(leftWallCheck)
+            {
+                Vector3 jumpDirectrionFromWall = transform.up + leftHit.normal;
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
+            }
+            else if (rightWallCheck)
+            {
+                Vector3 jumpDirectrionFromWall = transform.up + rightHit.normal;
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
+            }
+        }
+    }
+
+    void EndWallrunning()
+    {
+        isWallRunning = false;
+        rb.useGravity = true;
+    }
 
     /*Dash() adds a brief acceleration to player - intended as sprint at first but dash makes gameplay more interesting
      * essentially pushes the player object 
@@ -260,7 +337,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(slopeMovementDirection.normalized * movementSpeed * movementMultiplier, ForceMode.Acceleration);
 
         }
-        else if (!isOnFloor)
+        else if (!isOnFloor && !isWallRunning)
         {
             //using velocity instead of force as allows for "smoother" falling
             rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 1.5f;
