@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectRotateScript : MonoBehaviour
 {
     public GameObject objectToRotate;
-    [SerializeField] float rotationSpeed = 8f;
+    [SerializeField] float rotationSpeed = 150f;
     void Update()
     {
         rotateStopRotate();

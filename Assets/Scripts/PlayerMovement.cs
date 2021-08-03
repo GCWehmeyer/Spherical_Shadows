@@ -9,7 +9,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     public Camera playerCam;
 
-
+    [Header("PlayerStats")]
+    [SerializeField] float PlayerVelocity;
+    
     //Houses variables pertaining to movement and orirntation
     [Header("Movement")]
     public float movementSpeed = 9.5f;
@@ -28,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
     bool isWallRunning = false;
     [SerializeField] Transform orientation;
     [SerializeField] float distanceToWall = 1.5f;
-    [SerializeField] float slipFactor = 1.5f;
+    [SerializeField] float slipFactor = 1.75f;
     [SerializeField] float jumpForce_WallVersion = 20f;
-    [SerializeField] float wallRunMulti = 3.5f;
+    [SerializeField] float wallRunMulti = 2.5f;
     bool leftWallCheck = false;
     bool rightWallCheck = false;
     RaycastHit leftHit;
@@ -208,13 +210,14 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(walkKey))// && isOnFloor) //Dependent on if we want to allow crouching mid-air
         {
             unCrouch();
+
         }
         if (Input.GetKeyDown(resetKey))
         {
             ResetLevel();
         }
 
-
+        PlayerVelocity = rb.velocity.magnitude;
         slopeMovementDirection = Vector3.ProjectOnPlane(movementDirection, slopeHit.normal); // used in slope detection
     }
 
@@ -280,8 +283,8 @@ public class PlayerMovement : MonoBehaviour
         playerHeight = playerHeight / 2;
         
         //reduce speed
-        movementSpeed = 3f;
-
+        movementSpeed = 1.75f;
+        
 
         //old code - kept for completions sake
         /*if (!crouchingState)
@@ -350,7 +353,7 @@ public class PlayerMovement : MonoBehaviour
         else if (isWallRunning)
         {
             rb.AddForce(movementDirection.normalized * wallRunMulti * movementSpeed, ForceMode.Acceleration);
-            //rb.AddForce(Vector3.down * slipFactor, ForceMode.Force); //Makes only gravity effect be the "slip factor of all walls
+            rb.AddForce(Vector3.down * slipFactor, ForceMode.Acceleration); //Makes only gravity effect be the "slip factor of all walls
         }
 
         }
