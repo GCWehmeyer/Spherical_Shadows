@@ -174,6 +174,25 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+        if(Input.GetKeyDown(jumpKey) && isWallRunning)
+        {
+            if (leftWallCheck)
+            {
+                Vector3 jumpDirectrionFromWall = transform.up + leftHit.normal;
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
+            }
+            else if (rightWallCheck)
+            {
+                Vector3 jumpDirectrionFromWall = transform.up + rightHit.normal;
+                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
+            }
+            else 
+            { 
+                Jump(); 
+            }
+        }
         /*if (!isOnFloor)//changes player velocity for better falling experience
         {
             rb.velocity += Vector3.up * Physics.gravity.y*Time.deltaTime;
@@ -222,22 +241,6 @@ public class PlayerMovement : MonoBehaviour
     {
         isWallRunning = true;
         rb.useGravity = false;
-        
-        if(Input.GetKeyDown(jumpKey))
-        {
-            if(leftWallCheck)
-            {
-                Vector3 jumpDirectrionFromWall = transform.up + leftHit.normal;
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
-            }
-            else if (rightWallCheck)
-            {
-                Vector3 jumpDirectrionFromWall = transform.up + rightHit.normal;
-                rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
-                rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
-            }
-        }
     }
 
     void EndWallrunning()
@@ -341,6 +344,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //using velocity instead of force as allows for "smoother" falling
             rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 1.5f;
+            rb.AddForce(movementDirection.normalized * movementSpeed, ForceMode.Acceleration);
             //rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier* airMovementMultiplier, ForceMode.Acceleration);
         }
         else if (isWallRunning)
