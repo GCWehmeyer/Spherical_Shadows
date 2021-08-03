@@ -27,9 +27,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Wallrun")]
     bool isWallRunning = false;
     [SerializeField] Transform orientation;
-    [SerializeField] float distanceToWall = 1f;
-    [SerializeField] float slipFactor = 2f;
+    [SerializeField] float distanceToWall = 1.5f;
+    [SerializeField] float slipFactor = 1.5f;
     [SerializeField] float jumpForce_WallVersion = 20f;
+    [SerializeField] float wallRunMulti = 3.5f;
     bool leftWallCheck = false;
     bool rightWallCheck = false;
     RaycastHit leftHit;
@@ -221,7 +222,6 @@ public class PlayerMovement : MonoBehaviour
     {
         isWallRunning = true;
         rb.useGravity = false;
-        rb.AddForce(Vector3.down * slipFactor, ForceMode.Force); //Makes only gravity effect be the "slip factor of all walls
         
         if(Input.GetKeyDown(jumpKey))
         {
@@ -332,7 +332,7 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier, ForceMode.Acceleration);
         }
-        else if(isOnFloor && OnSlope())
+        else if (isOnFloor && OnSlope())
         {
             rb.AddForce(slopeMovementDirection.normalized * movementSpeed * movementMultiplier, ForceMode.Acceleration);
 
@@ -343,8 +343,13 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity += Vector3.up * Physics.gravity.y * Time.deltaTime * 1.5f;
             //rb.AddForce(movementDirection.normalized * movementSpeed * movementMultiplier* airMovementMultiplier, ForceMode.Acceleration);
         }
+        else if (isWallRunning)
+        {
+            rb.AddForce(movementDirection.normalized * wallRunMulti * movementSpeed, ForceMode.Acceleration);
+            //rb.AddForce(Vector3.down * slipFactor, ForceMode.Force); //Makes only gravity effect be the "slip factor of all walls
+        }
 
-    }
+        }
 
 
     //Reset scene/level
