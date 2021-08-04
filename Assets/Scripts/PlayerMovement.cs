@@ -151,15 +151,15 @@ public class PlayerMovement : MonoBehaviour
         
         if(!isOnFloor)
         {
-            print("Wall Running");
+            //print("Wall Running");
             if (leftWallCheck)
             {
-                print("LEFT - Wall Running");
+                //print("LEFT - Wall Running");
                 BeginWallrunning();
             }
             else if(rightWallCheck)
             {
-                print("RIGHT - Wall Running");
+                //print("RIGHT - Wall Running");
                 BeginWallrunning();
             }
             else 
@@ -178,14 +178,17 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKeyDown(jumpKey) && isWallRunning)
         {
+            //print("JUMP")
             if (leftWallCheck)
             {
+                //print("LEFT")
                 Vector3 jumpDirectrionFromWall = transform.up + leftHit.normal;
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
             }
             else if (rightWallCheck)
             {
+                //print("RIGHT")
                 Vector3 jumpDirectrionFromWall = transform.up + rightHit.normal;
                 rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
                 rb.AddForce(jumpDirectrionFromWall * jumpForce_WallVersion, ForceMode.Acceleration);
