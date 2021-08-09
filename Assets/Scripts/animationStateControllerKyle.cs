@@ -10,12 +10,12 @@ public class animationStateControllerKyle : MonoBehaviour
     int isRunningHash;
     int isSneakingHash;
     int isJumpingHash;
+    int isIdleJumpHash;
     int isPickupHash;
     int isStrafeLeftHash;
     int isStrafeRightHash;
     int isRunbackHash;
 
-    //int isJumpingStillHash;
     //int isThrowHash;  
 
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class animationStateControllerKyle : MonoBehaviour
         isStrafeLeftHash = Animator.StringToHash("isLeftStrafe");
         isStrafeRightHash = Animator.StringToHash("isRightStrafe");
         isRunbackHash = Animator.StringToHash("isRunBack");
+        isIdleJumpHash = Animator.StringToHash("isIdleJump");
 
-        //isJumpingStillHash = Animator.StringToHash("isJumpingStill");
         //isThrowHash = Animator.StringToHash("isThrow");   
     }
 
@@ -44,8 +44,8 @@ public class animationStateControllerKyle : MonoBehaviour
         bool isStrafeLeft = animator.GetBool(isStrafeLeftHash);
         bool isStrafeRight = animator.GetBool(isStrafeRightHash);
         bool isRunback = animator.GetBool(isRunbackHash);
-
-        //bool isJumpingStill = animator.GetBool(isJumpingStillHash);     
+        bool isIdleJump = animator.GetBool(isIdleJumpHash);
+ 
         //bool isThrow = animator.GetBool(isThrowHash);
 
         bool runPressed = Input.GetKey("w");
@@ -152,18 +152,18 @@ public class animationStateControllerKyle : MonoBehaviour
         }
 
         //JUMPING STANDING STILL
-        //if (!isJumpingStill && jumpPressed)
-        //{
+        if (!isIdleJump && (!runPressed && jumpPressed))
+        {
             //then set the isJumping boolean to be true
-        //    animator.SetBool(isJumpingStillHash, true);
+            animator.SetBool(isIdleJumpHash, true);
 
-        //}
-        // if player is jumping and stops running or stops walking
-        //if (isJumpingStill && !jumpPressed)
-        //{
+        }
+        //if player is jumping and stops running or stops walking
+        if (isIdleJump && !jumpPressed)
+        {
             //then set the isJumping boolean to be false
-        //    animator.SetBool(isJumpingStillHash, false);
-        //}
+            animator.SetBool(isIdleJumpHash, false);
+        }
 
         //THROW
         // if player not holding ball pickup
