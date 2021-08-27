@@ -7,11 +7,11 @@ public class TeleportScript : MonoBehaviour
     
     //The object that this is placed on must have a collider of some kind - The IsTrigger option must also be ticked !!!!!!
 
-    [SerializeField] public Transform teleportDestination;
-    [SerializeField] public GameObject player;
+    [SerializeField] public Transform teleportDestination; //where
+    [SerializeField] public GameObject item; // what&who
     /*Variables: 
      * teleportDestination must be any gameobject placed at the desired position of teleportation
-     * player MUST BE ASSIGNED TO ONLY THE "Player" SUB-OBJECT IN THE PLAYERFULL PREFAB!!!!! 
+     * item MUST BE ASSIGNED TO ONLY THE "Player" SUB-OBJECT IN THE PLAYERFULL PREFAB when aiming for player teleport
      *  If teleportation is not acting as intended chech above is correct!!!
      * */
 
@@ -19,13 +19,17 @@ public class TeleportScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other) //When any object collides with the object this script is placed on
     {
-        if (other.tag == "Player" || other.tag == "Teleportable") // Ensures only the player can trigger the teleportation
+        if (other.tag == "Player" || other.tag == "Teleportable" || other.tag == "Ball") // Ensures only the player can trigger the teleportation
         {
-            player.transform.position = teleportDestination.position; // Position shift
+            item.transform.position = teleportDestination.position; // Position shift
         }
     }
 
 
 }
-/*Currently, only the player can make use of the "portals" - depending on further progress in development this is all that is needed 
+/*TO DO:
+ * set up variables for each use case:
+ * if ball then teleport item
+ * if player then teleport player
+ * if teleportable then teleport teleportable
  */

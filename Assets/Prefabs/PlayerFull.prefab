@@ -1180,7 +1180,6 @@ MonoBehaviour:
   PlayerVelocity: 0
   movementSpeed: 6
   movementMultiplier: 10
-  isWallRunning: 0
   orientation: {fileID: 529806419241343330}
   distanceToWall: 0.5
   slipFactor: 1.5
@@ -2503,7 +2502,7 @@ GameObject:
   - component: {fileID: 8416585450820992135}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
