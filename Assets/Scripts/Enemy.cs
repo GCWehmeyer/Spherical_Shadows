@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     private PlayerMovement PlayerScript;
 
     // Start is called before the first frame update
+    [System.Obsolete]
     IEnumerator Start()
     {
         Target = GameObject.FindGameObjectWithTag(PlayerTag).transform;
@@ -88,6 +89,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    [System.Obsolete]
     void Attack()
     {
         transform.LookAt(Target);
@@ -95,7 +97,16 @@ public class Enemy : MonoBehaviour
 
         if (CurTime < 0)
         {
-            //PlayerScript.health--;
+            if (PlayerScript.health > 0)
+            {
+                PlayerScript.health--;
+            }
+            else
+            {
+                Application.LoadLevel(Application.loadedLevel);
+                PlayerScript.health = 10;
+            }
+            
             CurTime = AttackTimer;
         }
 

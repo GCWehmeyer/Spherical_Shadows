@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     float playerHeight = 2f;
+    public int health = 10;
     Rigidbody rb;
     public Camera playerCam;
 
