@@ -18,12 +18,12 @@ public class Enemy : MonoBehaviour
     public Transform Target;
     public string PlayerTag = "Player";
     private float CurTime;
-    private PlayerMovement PlayerScript;
+    private PlayerMovement PlayerScript;                      
 
     // Start is called before the first frame update
     [System.Obsolete]
     IEnumerator Start()
-    {
+    {               
         Target = GameObject.FindGameObjectWithTag(PlayerTag).transform;
         CurTime = AttackTimer;
         if (Target != null)
@@ -54,12 +54,12 @@ public class Enemy : MonoBehaviour
         transform.LookAt(Target);
         if (Vector3.Distance(Target.position, transform.position) < GoToDistance)
         {
-            CurState = State.GOTO;
+            CurState = State.GOTO;            
         }
     }
 
     void GoTo()
-    {
+    {       
         transform.LookAt(Target);
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
         RaycastHit Buddy;
@@ -116,3 +116,24 @@ public class Enemy : MonoBehaviour
         }
     }
 }
+
+//ANIMATION
+
+//Animator animator;    
+
+//animator = GetComponent<Animator>();                        //Animator created for Drone
+//isHitHash = Animator.StringToHash("isHit");
+//isFowardHash = Animator.StringToHash("isFoward");
+//isFoward = Animator.           //Link animation to variable
+
+//bool isFoward = animator.GetBool(isFowardHash);         //Boolean variable for Animation
+//bool isHit = animator.GetBool(isHitHash);
+
+//if (!isFoward)                                      //Foward Animation for Drone
+//{
+//    animator.SetBool(isFowardHash, true);           //Move Foward Animate
+//}
+//else if (isFoward)
+//{
+//    animator.SetBool(isFowardHash, false);          //Stop Moving Foward Animate
+//}
