@@ -62,9 +62,11 @@ public class PlayerMovement : MonoBehaviour
     [Header("Floor Detection")]
     [SerializeField] LayerMask floorMask;
     bool isOnFloor;
+    bool isOnPlatform;
     //float floorDistcance = 0.5f;
     RaycastHit slopeHit;
-
+    RaycastHit platformHit;
+    private Transform platformHitPosition;
 
     //all other variables
     //[Header("Misc")]
@@ -110,6 +112,24 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    private bool OnPlatform()
+    {
+        //simple downward raycast check |
+        if (Physics.Raycast(transform.position, Vector3.down, out platformHit, playerHeight / 2 + 0.5f))
+        {
+            if (platformHit.transform.tag == "Platform")
+            {
+                print("Platty");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
+
 
     //Checks to find a wall for wall running
     private void FindWall()
@@ -132,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
         //isOnFloor = Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f);
         //isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
         isOnFloor = OnFloor();
-
+        isOnPlatform = OnPlatform();
         PlayerInput();
         ControlDrag();
         FindWall();
@@ -172,6 +192,19 @@ public class PlayerMovement : MonoBehaviour
         {
             EndWallrunning();
         }
+
+        if(isOnPlatform)
+        {
+            if (platformHit.transform.tag == "Platform")
+            {
+                platformHitPosition = platformHit.transform;
+                //transform.position = Vector3.Lerp(transform.position, platformHitPosition.position, 1);
+                Vector3 platformPushDirection = platformHitPosition.transform.position - transform.position;
+                rb.AddForce(platformPushDirection.normalized * 0.4f, ForceMode.Impulse);
+            }
+        }
+
+
 
         if (Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
         {
