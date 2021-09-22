@@ -931,7 +931,7 @@ GameObject:
   - component: {fileID: 529806419707272017}
   - component: {fileID: 529806419707272016}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1824,7 +1824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529806420487529843}
   m_Layer: 0
-  m_Name: Crosshair
+  m_Name: HUD Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

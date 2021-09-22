@@ -17,6 +17,7 @@ public class PickUp : MonoBehaviour
     public float objectMovementSpeed = 200f; //speed of object once picked up
     public float throwForce = 5f;
     private GameObject heldObject;
+    public int hasHeldObject = 0;
 
 
     void Update()
@@ -78,6 +79,7 @@ public class PickUp : MonoBehaviour
             
             objectRigidBody.transform.parent = holdPosition;
             heldObject = pickUpObject;
+            hasHeldObject = 1;
         }
     }
 
@@ -110,7 +112,7 @@ public class PickUp : MonoBehaviour
         //Actual throw functionality
         //normalized to just get direction and not the full vector
         heldRigidbody.AddForce(throwDirection.normalized * throwForce, ForceMode.Impulse);
-
+        hasHeldObject = 0;
         heldObject.transform.parent = null;
         heldObject = null;
     }
