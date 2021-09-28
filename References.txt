@@ -4,3 +4,4 @@ Sci-Fi Enemies - @https://assetstore.unity.com/packages/3d/characters/robots/sci
 Modular Cabin - Erika Moya @https://opponent019.itch.io/modular-cabin
 Ball Pack - YounGen Tech
 Sci-Fi Styled Modular Pack - @https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-styled-modular-pack-82913
+Sci-Fi Drones - Lokus Bodor @https://assetstore.unity.com/packages/3d/characters/robots/sci-fi-drones-90326

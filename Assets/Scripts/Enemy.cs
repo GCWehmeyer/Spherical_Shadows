@@ -18,7 +18,9 @@ public class Enemy : MonoBehaviour
     public Transform Target;
     public string PlayerTag = "Player";
     private float CurTime;
-    private PlayerMovement PlayerScript;                      
+    private PlayerMovement PlayerScript;  
+
+    public HealthBar healthBar;                   //Include HealthBar
 
     // Start is called before the first frame update
     [System.Obsolete]
@@ -100,13 +102,13 @@ public class Enemy : MonoBehaviour
             if (PlayerScript.health > 0)
             {
                 PlayerScript.health--;
+                healthBar.takeDamage(5);
             }
             else
             {
                 Application.LoadLevel(Application.loadedLevel);
                 PlayerScript.health = 10;
             }
-            
             CurTime = AttackTimer;
         }
 
