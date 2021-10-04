@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     [System.Obsolete]
     IEnumerator Start()
-    {               
+    {              
         Target = GameObject.FindGameObjectWithTag(PlayerTag).transform;
         CurTime = AttackTimer;
         if (Target != null)
@@ -93,16 +93,15 @@ public class Enemy : MonoBehaviour
 
     [System.Obsolete]
     void Attack()
-    {
+    { 
         transform.LookAt(Target);
         CurTime -= Time.deltaTime;
-
         if (CurTime < 0)
         {
             if (PlayerScript.health > 0)
             {
                 PlayerScript.health--;
-                healthBar.takeDamage(5);
+                healthBar.takeDamage(10);
             }
             else
             {
