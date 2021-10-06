@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.012410953, g: 0.01250857, b: 0.012560272, a: 1}
+  m_IndirectSpecularColor: {r: 0.05581162, g: 0.05581162, b: 0.05581162, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2522,7 +2522,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-90374
+  m_Name: pb_Mesh-2738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3112,7 +3112,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh101938
+  m_Name: pb_Mesh14730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3997,7 +3997,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89620
+  m_Name: pb_Mesh-1774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7157,7 +7157,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89710
+  m_Name: pb_Mesh-1878
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7773,7 +7773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh101752
+  m_Name: pb_Mesh14464
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7936,7 +7936,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh102352
+  m_Name: pb_Mesh15306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8311,7 +8311,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-284730
+  m_Name: pb_Mesh-3114
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12638,7 +12638,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-90530
+  m_Name: pb_Mesh-2916
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14071,7 +14071,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-284718
+  m_Name: pb_Mesh-3108
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21288,7 +21288,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-90518
+  m_Name: pb_Mesh-2904
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21451,7 +21451,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-139006
+  m_Name: pb_Mesh15026
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25622,7 +25622,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89438
+  m_Name: pb_Mesh-1570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27301,7 +27301,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89722
+  m_Name: pb_Mesh-1890
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31080,7 +31080,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-90362
+  m_Name: pb_Mesh-2726
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31810,7 +31810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89632
+  m_Name: pb_Mesh-1786
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38384,7 +38384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-89450
+  m_Name: pb_Mesh-1582
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38541,6 +38541,36 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2144688286
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144688287}
+  m_Layer: 0
+  m_Name: DoorTP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2144688287
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144688286}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.758292, y: -3.93, z: 29.6815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &836290355594793470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6664369858461163149, guid: a273900f630a9d8449dca9edae52ab1b,
@@ -38554,6 +38584,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1174803408}
     m_Modifications:
+    - target: {fileID: 4702133898295288751, guid: a273900f630a9d8449dca9edae52ab1b,
+        type: 3}
+      propertyPath: teleportee
+      value: 
+      objectReference: {fileID: 431661711}
+    - target: {fileID: 4702133898295288751, guid: a273900f630a9d8449dca9edae52ab1b,
+        type: 3}
+      propertyPath: teleporter
+      value: 
+      objectReference: {fileID: 1824431544}
+    - target: {fileID: 4702133898295288751, guid: a273900f630a9d8449dca9edae52ab1b,
+        type: 3}
+      propertyPath: teleportDestination
+      value: 
+      objectReference: {fileID: 2144688287}
     - target: {fileID: 6664369857760752149, guid: a273900f630a9d8449dca9edae52ab1b,
         type: 3}
       propertyPath: teleportee
