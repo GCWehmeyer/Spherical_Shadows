@@ -886,7 +886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 986775741}
-  item: {fileID: 1219466668}
+  teleportee: {fileID: 1219466668}
+  teleporter: {fileID: 727666705}
 --- !u!136 &214082060
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2505,7 +2506,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1911774906}
-  item: {fileID: 1898128334}
+  teleportee: {fileID: 1898128334}
+  teleporter: {fileID: 1898128334}
 --- !u!23 &574515952
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2839,7 +2841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646244823}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.75, y: -1.83, z: 2.24}
+  m_LocalPosition: {x: 2.75, y: -1.75, z: 2.24}
   m_LocalScale: {x: 12, y: 0.2, z: 12}
   m_Children: []
   m_Father: {fileID: 1286536688}
@@ -2858,7 +2860,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1757453969}
-  item: {fileID: 1898128334}
+  teleportee: {fileID: 1898128334}
+  teleporter: {fileID: 1898128334}
 --- !u!65 &646244826
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5072,7 +5075,6 @@ MonoBehaviour:
   GoToDistance: 6
   AttackDistance: 2
   AttackTimer: 2
-  Target: {fileID: 0}
   PlayerTag: Player
   healthBar: {fileID: 349741612}
 --- !u!1 &1595860860
@@ -5459,7 +5461,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1354814545}
-  item: {fileID: 2082900168}
+  teleportee: {fileID: 2082900168}
+  teleporter: {fileID: 2082900168}
 --- !u!136 &1646962470
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5588,7 +5591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1887446292}
-  item: {fileID: 1898128334}
+  teleportee: {fileID: 1898128334}
+  teleporter: {fileID: 1898128334}
 --- !u!136 &1739844680
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6509,7 +6513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 553422603}
-  item: {fileID: 1204576268}
+  teleportee: {fileID: 1204576268}
+  teleporter: {fileID: 1898128334}
 --- !u!136 &1870841798
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6964,7 +6969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportDestination: {fileID: 1911774906}
-  item: {fileID: 1898128334}
+  teleportee: {fileID: 1898128334}
+  teleporter: {fileID: 1898128334}
 --- !u!136 &1917686827
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7374,7 +7380,6 @@ MonoBehaviour:
   GoToDistance: 6
   AttackDistance: 2
   AttackTimer: 2
-  Target: {fileID: 0}
   PlayerTag: Player
   healthBar: {fileID: 349741612}
 --- !u!1 &1993745246
@@ -26244,6 +26249,16 @@ PrefabInstance:
     - target: {fileID: 836290354748679522, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: item
+      value: 
+      objectReference: {fileID: 1898128334}
+    - target: {fileID: 836290354748679522, guid: 188b0ef99c87e5e4c9f5892a031dce77,
+        type: 3}
+      propertyPath: teleportee
+      value: 
+      objectReference: {fileID: 1898128334}
+    - target: {fileID: 836290354748679522, guid: 188b0ef99c87e5e4c9f5892a031dce77,
+        type: 3}
+      propertyPath: teleporter
       value: 
       objectReference: {fileID: 1898128334}
     - target: {fileID: 836290355038177786, guid: 188b0ef99c87e5e4c9f5892a031dce77,

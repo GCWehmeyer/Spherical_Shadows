@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
     public float GoToDistance = 6;
     public float AttackDistance = 2;
     public float AttackTimer = 2;
-    public Transform Target;
+    private Transform Target;
     public string PlayerTag = "Player";
     private float CurTime;
     private PlayerMovement PlayerScript;  
