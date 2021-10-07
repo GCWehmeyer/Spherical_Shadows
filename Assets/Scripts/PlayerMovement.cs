@@ -39,9 +39,6 @@ public class PlayerMovement : MonoBehaviour
     RaycastHit leftHit;
     RaycastHit rightHit;
 
-    [Header("Wallrun Camera Effects")]
-
-
     [Header("Jump")]
     public float jumpForce = 15f;
 
@@ -119,7 +116,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (platformHit.transform.tag == "Platform")
             {
-                print("Platty");
                 return true;
             }
             else
@@ -204,8 +200,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-
         if (Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
         {
             Jump();
@@ -274,7 +268,6 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
     /* BeginWallrunning() initialises the wallrunning for the player
      */
     void BeginWallrunning()
@@ -309,7 +302,6 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
-
 
     /*Crouch() allows the player to move slower as well as "Shrink down"
      */
@@ -354,7 +346,6 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
-
     //Simply changes drag/friction depending on location in scene - can add more types of floor???
     void ControlDrag()
     {
@@ -394,7 +385,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         }
-
 
     //Reset scene/level
     void ResetLevel()
