@@ -13,6 +13,11 @@ public class HealthBar : MonoBehaviour
     {
         slider.value -= damage;
     }
+
+    public void getHealth(int heal)
+    {
+        slider.value += heal;
+    }
     
     public void SetMaxHealth(int health)
     {
