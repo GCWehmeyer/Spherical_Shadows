@@ -4,18 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
-{    
+{
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Ball")
+        {
+            
+            for (int i = 0; i < 1000; i++)
+            {
+                other.transform.localScale *= 1.001f;
+            }
+
+            nextLevel();
+        }
     }
 
 
