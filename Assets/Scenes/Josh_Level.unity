@@ -8797,7 +8797,7 @@ PrefabInstance:
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7
+      value: -7.38
       objectReference: {fileID: 0}
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
@@ -8807,7 +8807,7 @@ PrefabInstance:
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.428
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 836290355038177786, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
@@ -35871,7 +35871,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174803407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.33744, y: 1.2803358, z: 86.09416}
+  m_LocalPosition: {x: 0.9, y: 1.2803358, z: 87.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1438860213}
@@ -54963,7 +54963,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Finish each course \nto clear the door\nand progress on to the next level"
+  m_text: "Finish each course \nto clear the door\nand progress on to the next level\nBest
+    path is to start on the RIGHT"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -55026,7 +55027,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.73652, y: 0.19156455, z: 9.041047, w: 4.0814424}
+  m_margin: {x: 9.73652, y: 0.13285576, z: 9.041047, w: 4.0814424}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -62586,8 +62587,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946867563}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.317665, y: 29.858479, z: 48.813198}
+  m_LocalRotation: {x: 0, y: 0.2588191, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 30.09, y: 29.858479, z: 35.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 840124852}
@@ -62613,7 +62614,7 @@ Transform:
   - {fileID: 638761554}
   m_Father: {fileID: 0}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
 --- !u!1001 &1953611310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62754,12 +62755,12 @@ PrefabInstance:
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.434
+      value: -16.126
       objectReference: {fileID: 0}
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.937
+      value: -0.016
       objectReference: {fileID: 0}
     - target: {fileID: 836290355038177786, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
@@ -64114,7 +64115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969004325}
   m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 20, y: 0, z: 61.3}
+  m_LocalPosition: {x: 20, y: 0, z: 60.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1219230355}
