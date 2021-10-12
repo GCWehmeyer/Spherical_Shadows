@@ -12,6 +12,7 @@ public class PickUp : MonoBehaviour
     public float ballScale = 4f;
     [Header("Keybinds")]
     [SerializeField] KeyCode pickUpKey = KeyCode.E;
+    [SerializeField] KeyCode pickUpKeyController = KeyCode.Joystick1Button2; // X
 
     public float rangePickUp = 3f; //distance for pickup
     public float objectMovementSpeed = 200f; //speed of object once picked up
@@ -22,7 +23,7 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(pickUpKey))
+        if (Input.GetKeyDown(pickUpKey) || Input.GetKeyDown(pickUpKeyController))
         {
             // if no object
             if (heldObject == null)

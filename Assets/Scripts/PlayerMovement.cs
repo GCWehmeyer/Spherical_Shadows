@@ -45,9 +45,13 @@ public class PlayerMovement : MonoBehaviour
     //Keep track off all control keys
     [Header("Keybinds")]
     [SerializeField] KeyCode jumpKey = KeyCode.Space;
+    [SerializeField] KeyCode jumpKeyController = KeyCode.JoystickButton0; // A
     [SerializeField] KeyCode dashKey = KeyCode.LeftShift; //StickyKeys is an issue - add delay to circumvent???
+    [SerializeField] KeyCode dashKeyController = KeyCode.JoystickButton3; // Y
+    [SerializeField] KeyCode walkKeyController = KeyCode.JoystickButton1; // B
     [SerializeField] KeyCode walkKey = KeyCode.LeftControl;
     [SerializeField] KeyCode resetKey = KeyCode.R;
+    //[SerializeField] KeyCode resetKeyController = KeyCode.JoystickButton6;
 
 
     //Variables for friction/drag 
@@ -200,11 +204,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(jumpKey) && isOnFloor)//can only jump if on floor
+        if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKeyController)) && isOnFloor)//can only jump if on floor
         {
             Jump();
         }
-        if(Input.GetKeyDown(jumpKey) && isWallRunning)
+        if((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKeyController)) && isWallRunning)
         {
             //print("JUMP")
             if (leftWallCheck)
@@ -230,15 +234,15 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector3.up * Physics.gravity.y*Time.deltaTime;
         }*/
-        if (Input.GetKeyDown(dashKey))//dash happens at key press
+        if (Input.GetKeyDown(dashKey) || Input.GetKeyDown(dashKeyController))//dash happens at key press
         {
             Dash();
         }
-        if (Input.GetKey(walkKey))// && isOnFloor) //Dependent on if we want to allow crouching mid-air
+        if (Input.GetKey(walkKey) || Input.GetKeyDown(walkKeyController))// && isOnFloor) //Dependent on if we want to allow crouching mid-air
         {
             Crouch();
         }
-        if (Input.GetKeyUp(walkKey))// && isOnFloor) //Dependent on if we want to allow crouching mid-air
+        if (Input.GetKeyUp(walkKey) || Input.GetKeyUp(walkKeyController))// && isOnFloor) //Dependent on if we want to allow crouching mid-air
         {
             unCrouch();
 

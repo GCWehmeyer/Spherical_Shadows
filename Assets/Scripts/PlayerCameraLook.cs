@@ -14,6 +14,8 @@ public class PlayerCameraLook : MonoBehaviour
     //Initialisation of input variables
     float mouseX;
     float mouseY;
+    float controllerX;
+    float controllerY;
     public float sensitivityMultiplier = 0.03f;
     float xRotation;
     float yRotation;
@@ -41,6 +43,8 @@ public class PlayerCameraLook : MonoBehaviour
     void PlayerInput()
     {
         //Takes in mouse movement
+        //controllerX
+        //controllerY
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 
