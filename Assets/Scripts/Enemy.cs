@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour
     public string PlayerTag = "Player";
     private float CurTime;
     private PlayerMovement PlayerScript;  
-
     public HealthBar healthBar;                   //Include HealthBar
 
     // Start is called before the first frame update

@@ -1,14 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AddHealth : MonoBehaviour
 {
-    public Slider slider;
+    public HealthBar healthBar;
+    private PlayerMovement PlayerScript;  
 
-    public void getHealth(int heal)
+    [SerializeField] public Transform teleportDestination; //where
+    [SerializeField] public GameObject teleportee; // what/who
+    [SerializeField] public GameObject teleporter; // trigger obj
+
+    void OnTriggerEnter(Collider other) //When any object collides with the object this script is placed on
     {
-        slider.value += heal;
+        if (other.tag == teleporter.tag) // Ensures only the player can trigger the teleportation
+        {
+            teleportee.transform.position = teleportDestination.position; // Position shift
+            PlayerScript.health++;
+            healthBar.getHealth(10);
+        }
     }
 }
