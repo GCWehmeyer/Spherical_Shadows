@@ -127,7 +127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1996
+  m_Name: pb_Mesh-698036
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4138,7 +4138,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15802
+  m_Name: pb_Mesh101038
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4529,7 +4529,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15298
+  m_Name: pb_Mesh100534
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4930,7 +4930,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15636
+  m_Name: pb_Mesh100872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12005,8 +12005,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 2
-  GoToDistance: 6
+  Speed: 5
+  GoToDistance: 10
   AttackDistance: 4
   AttackTimer: 2
   PlayerTag: Player
@@ -29955,9 +29955,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 4
+  Speed: 5
   GoToDistance: 10
-  AttackDistance: 8
+  AttackDistance: 5
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
@@ -31697,9 +31697,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 4
+  Speed: 5
   GoToDistance: 10
-  AttackDistance: 8
+  AttackDistance: 5
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
@@ -34255,8 +34255,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 2
-  GoToDistance: 6
+  Speed: 5
+  GoToDistance: 10
   AttackDistance: 4
   AttackTimer: 2
   PlayerTag: Player
@@ -35134,9 +35134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 3
+  Speed: 4
   GoToDistance: 6
-  AttackDistance: 2
+  AttackDistance: 3
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
@@ -37214,9 +37214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 4
+  Speed: 5
   GoToDistance: 10
-  AttackDistance: 8
+  AttackDistance: 5
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
@@ -37683,9 +37683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 4
+  Speed: 5
   GoToDistance: 10
-  AttackDistance: 8
+  AttackDistance: 5
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
@@ -39175,7 +39175,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1984
+  m_Name: pb_Mesh-698024
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39860,9 +39860,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 4
+  Speed: 5
   GoToDistance: 10
-  AttackDistance: 8
+  AttackDistance: 5
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
