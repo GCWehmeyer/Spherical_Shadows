@@ -16,8 +16,6 @@ public class animationStateControllerKyle : MonoBehaviour
     int isStrafeRightHash;
     int isRunbackHash;
 
-    //int isThrowHash;  
-
     // Start is called before the first frame update
     void Start()
     {
@@ -30,8 +28,6 @@ public class animationStateControllerKyle : MonoBehaviour
         isStrafeRightHash = Animator.StringToHash("isRightStrafe");
         isRunbackHash = Animator.StringToHash("isRunBack");
         isIdleJumpHash = Animator.StringToHash("isIdleJump");
-
-        //isThrowHash = Animator.StringToHash("isThrow");   
     }
 
     // Update is called once per frame
@@ -45,14 +41,17 @@ public class animationStateControllerKyle : MonoBehaviour
         bool isStrafeRight = animator.GetBool(isStrafeRightHash);
         bool isRunback = animator.GetBool(isRunbackHash);
         bool isIdleJump = animator.GetBool(isIdleJumpHash);
- 
-        //bool isThrow = animator.GetBool(isThrowHash);
 
         bool runPressed = Input.GetKey("w");
+        float conRun = Input.GetAxisRaw("Vertical");
         bool sneakPressed = Input.GetKey("left ctrl");
+        bool conSneak = Input.GetKey(KeyCode.JoystickButton1);
         bool jumpPressed = Input.GetKey("space");
+        bool conJump = Input.GetKey(KeyCode.JoystickButton0);
         bool pickupPressed = Input.GetKey("e");
+        bool conPickup = Input.GetKey(KeyCode.JoystickButton2);
         bool leftStrafe = Input.GetKey("a");
+        float conStrafe = Input.GetAxisRaw("Horizontal");
         bool rightStrafe = Input.GetKey("d");     
         bool runBack = Input.GetKey("s");
 
@@ -70,6 +69,39 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isRunningHash, false);
         }
 
+        //RUNNING With Controller
+        if (!isRunning && (conRun>0))
+        {
+            animator.SetBool(isRunningHash, true);
+        }
+        if (isRunning && !(conRun>0))
+        {
+            animator.SetBool(isRunningHash, false);
+        }
+
+        //Run Backwards
+        if (!isRunback && runBack)
+        {
+            //then set the isisRunback boolean to be true
+            animator.SetBool(isRunbackHash, true);
+        }
+        // if player is running backwards and stops
+        if (isRunback && !runBack)
+        {
+            //then set the isisRunback boolean to be false
+            animator.SetBool(isRunbackHash, false);
+        }
+
+        //Run Backwards with Controller
+        if (!isRunback && (conRun<0))
+        {
+            animator.SetBool(isRunbackHash, true);
+        }
+        if (isRunback && !(conRun<0))
+        {
+            animator.SetBool(isRunbackHash, false);
+        }
+
         //SNEAKING
         // if player is walking and not sneaking and pressing left shift key
         if (!isSneaking && (runPressed && sneakPressed))
@@ -84,21 +116,17 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isSneakingHash, false);
         }
 
-        //JUMPING with RUNNING
-        if (!isJumping && (runPressed && jumpPressed))
+        //SNEAKING With Controller
+        if (!isSneaking && (runPressed && conSneak))
         {
-            //then set the isJumping boolean to be true
-            animator.SetBool(isJumpingHash, true);
-
+            animator.SetBool(isSneakingHash, true);
         }
-        // if player is jumping and stops running or stops walking
-        if (isJumping && (!runPressed || !jumpPressed))
+        if (isSneaking && (!runPressed || !conSneak))
         {
-            //then set the isJumping boolean to be false
-            animator.SetBool(isJumpingHash, false);
+            animator.SetBool(isSneakingHash, false);
         }
 
-        //PICKUP
+        //PICKUP & THROW
         // if player not holding ball pickup
         if (!isPickup && pickupPressed)
         {
@@ -112,16 +140,36 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isPickupHash, false);
         }
 
+        //PICKUP & THROW With Controller
+        if (!isPickup && conPickup)
+        {
+            animator.SetBool(isPickupHash, true);
+        }
+        if (isPickup && !conPickup)
+        {
+            animator.SetBool(isPickupHash, false);
+        }
+
         //Strafe Left
-        if (!isStrafeLeft && leftStrafe)
+        if (!isStrafeLeft && (conStrafe<0))
         {
             //then set the isStrafeLeft boolean to be true
             animator.SetBool(isStrafeLeftHash, true);
         }
         // if player is straffing and stops
-        if (isStrafeLeft && !leftStrafe)
+        if (isStrafeLeft && !(conStrafe<0))
         {
             //then set the isStrafeLeft boolean to be false
+            animator.SetBool(isStrafeLeftHash, false);
+        }
+
+        //Strafe Left
+        if (!isStrafeLeft && leftStrafe)
+        {
+            animator.SetBool(isStrafeLeftHash, true);
+        }
+        if (isStrafeLeft && !leftStrafe)
+        {
             animator.SetBool(isStrafeLeftHash, false);
         }
 
@@ -138,17 +186,14 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isStrafeRightHash, false);
         }
 
-        //Run Backwards
-        if (!isRunback && runBack)
+        //Strafe Right
+        if (!isStrafeRight && (conStrafe>0))
         {
-            //then set the isisRunback boolean to be true
-            animator.SetBool(isRunbackHash, true);
+            animator.SetBool(isStrafeRightHash, true);
         }
-        // if player is running backwards and stops
-        if (isRunback && !runBack)
+        if (isStrafeRight && !(conStrafe>0))
         {
-            //then set the isisRunback boolean to be false
-            animator.SetBool(isRunbackHash, false);
+            animator.SetBool(isStrafeRightHash, false);
         }
 
         //JUMPING STANDING STILL
@@ -165,21 +210,19 @@ public class animationStateControllerKyle : MonoBehaviour
             animator.SetBool(isIdleJumpHash, false);
         }
 
-        //THROW
-        // if player not holding ball pickup
-        //if ((!isThrow && isPickup) && pickupPressed)
-        //{
-            //then set the isPickup boolean to be true
-        //    animator.SetBool(isThrowHash, true);
-        //}
-        // if player is holding ball 
-        //if ((isThrow && !isPickup) && !pickupPressed)
-        //{
-            //then set the isRunning boolean to be false
-        //    animator.SetBool(isThrowHash, false);
-        //}
+        //JUMPING with RUNNING
+        if (!isJumping && (runPressed && jumpPressed))
+        {
+            //then set the isJumping boolean to be true
+            animator.SetBool(isJumpingHash, true);
 
-
+        }
+        // if player is jumping and stops running or stops walking
+        if (isJumping && (!runPressed || !jumpPressed))
+        {
+            //then set the isJumping boolean to be false
+            animator.SetBool(isJumpingHash, false);
+        } 
     }
 }
 
