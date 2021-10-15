@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class AddHealth : MonoBehaviour
 {
+    private Transform Target;
     public HealthBar healthBar;
-    private PlayerMovement PlayerScript;  
+    private PlayerMovement PlayerScript;
 
-    [SerializeField] public GameObject teleporter; // trigger obj
-
-    void OnTriggerEnter(Collider other) //When any object collides with the object this script is placed on
+    private void Start()
     {
-        if (other.tag == teleporter.tag) // Ensures only the player can trigger the teleportation
+        Target = GameObject.FindGameObjectWithTag("Player").transform;
+        if (Target != null)
+        {
+            PlayerScript = Target.GetComponent<PlayerMovement>();
+        }
+    }
+
+        void OnTriggerEnter(Collider other) //When any object collides with the object this script is placed on
+    {
+        if (other.tag == "Player") // Ensures only the player can trigger the teleportation
         {
             PlayerScript.health++;
             healthBar.getHealth(10);
