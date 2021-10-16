@@ -9,7 +9,7 @@ public class DevLevelSecret : MonoBehaviour
 
     void toDevLevel()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(5);
     }
 
     void OnTriggerEnter(Collider other) //When any object collides with the object this script is placed on
