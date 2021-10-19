@@ -1262,7 +1262,10 @@ MonoBehaviour:
   wallRunMulti: 3.5
   jumpForce: 10
   jumpKey: 32
+  jumpKeyController: 330
   dashKey: 304
+  dashKeyController: 333
+  walkKeyController: 331
   walkKey: 306
   resetKey: 114
   floorMask:
@@ -2108,7 +2111,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529806420655406743}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!114 &529806420655406731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,6 +2129,7 @@ MonoBehaviour:
   throwPosition: {fileID: 529806419362000814}
   ballScale: 3
   pickUpKey: 101
+  pickUpKeyController: 352
   rangePickUp: 3
   objectMovementSpeed: 200
   throwForce: 30
@@ -2975,6 +2979,7 @@ MonoBehaviour:
   throwPosition: {fileID: 529806419692388123}
   ballScale: 4
   pickUpKey: 101
+  pickUpKeyController: 352
   rangePickUp: 3
   objectMovementSpeed: 200
   throwForce: 5
