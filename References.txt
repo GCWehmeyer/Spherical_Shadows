@@ -5,3 +5,8 @@ Modular Cabin - Erika Moya @https://opponent019.itch.io/modular-cabin
 Ball Pack - YounGen Tech @https://assetstore.unity.com/packages/3d/props/ball-pack-446
 Sci-Fi Styled Modular Pack - @https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-styled-modular-pack-82913
 Sci-Fi Drones - Lokus Bodor @https://assetstore.unity.com/packages/3d/characters/robots/sci-fi-drones-90326
+
+Music:
+Power Music for Awesome Games - Aural Space @https://assetstore.unity.com/packages/audio/music/electronic/free-power-music-for-awesome-games-166487?locale=zh-CN
+Music for Puzzle Games - Aural Space @https://assetstore.unity.com/packages/audio/music/music-for-puzzle-games-148119
+Sound Pack Free Pack - University of Games @https://assetstore.unity.com/packages/audio/sound-fx/sound-pack-free-pack-78186#content
