@@ -22,6 +22,7 @@ Each member was responsible for various aspects of development which are summari
   - [x] Moving platforms Scripting
   - [x] Portal asset development
   - [x] Teleporation Scripting 
+  - [x] Pause Menu Functionality 
   - [x] Level Transition Scripting
   - [x] Tutorial level designer
 
