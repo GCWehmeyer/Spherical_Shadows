@@ -145,16 +145,32 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
     }
 
-
-    //Update various conditions per frame
     private void FixedUpdate()
     {
         MovePlayer();
+        isOnPlatform = OnPlatform();
+
+        if(isOnPlatform)
+        {
+            if (platformHit.transform.tag == "Platform")
+            {
+                platformHitPosition = platformHit.transform;
+                //transform.position = Vector3.Lerp(transform.position, platformHitPosition.position, 1);
+                Vector3 platformPushDirection = platformHitPosition.transform.position - transform.position;
+                rb.AddForce(platformPushDirection.normalized * 0.4f, ForceMode.Impulse);
+            }
+        }
+    }
+
+    //Update various conditions per frame
+    private void Update()
+    {
+        
 
         //isOnFloor = Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f);
         //isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
         isOnFloor = OnFloor();
-        isOnPlatform = OnPlatform();
+        
         PlayerInput();
         ControlDrag();
         FindWall();
@@ -195,16 +211,7 @@ public class PlayerMovement : MonoBehaviour
             EndWallrunning();
         }
 
-        if(isOnPlatform)
-        {
-            if (platformHit.transform.tag == "Platform")
-            {
-                platformHitPosition = platformHit.transform;
-                //transform.position = Vector3.Lerp(transform.position, platformHitPosition.position, 1);
-                Vector3 platformPushDirection = platformHitPosition.transform.position - transform.position;
-                rb.AddForce(platformPushDirection.normalized * 0.4f, ForceMode.Impulse);
-            }
-        }
+        
 
         if ((Input.GetKeyDown(jumpKey) || Input.GetKeyDown(jumpKeyController)) && isOnFloor)//can only jump if on floor
         {

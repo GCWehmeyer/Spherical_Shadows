@@ -753,10 +753,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 0.435304
-  m_Height: 1.9
+  m_Radius: 0.26092198
+  m_Height: 1.6647819
   m_Direction: 1
-  m_Center: {x: -0.04139316, y: 0.870791, z: -0.016062628}
+  m_Center: {x: -0.028762996, y: 0.90164286, z: 0.021548837}
 --- !u!1 &529806419213426382
 GameObject:
   m_ObjectHideFlags: 0
@@ -9185,6 +9185,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103783026553917199, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: m_Height
+      value: 1.6647819
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103783026553917199, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.26092198
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103783026553917199, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.028762996
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103783026553917199, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.90164286
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103783026553917199, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.021548837
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43d5025425d563548843fc9af5f1e432, type: 3}
