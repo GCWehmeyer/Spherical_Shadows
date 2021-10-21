@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class Enemy : MonoBehaviour
     private float CurTime;
     private PlayerMovement PlayerScript;  
     public HealthBar healthBar;                   //Include HealthBar
+    [SerializeField] public Transform teleportDestination;
 
     // Start is called before the first frame update
     [System.Obsolete]
@@ -104,8 +106,18 @@ public class Enemy : MonoBehaviour
             }
             else
             {
-                Application.LoadLevel(Application.loadedLevel);
-                PlayerScript.health = 10;
+                if (SceneManager.GetActiveScene().buildIndex == 1)
+                {
+                    PlayerScript.health = 10;
+                    healthBar.getHealth(100);
+                    Target.transform.position = teleportDestination.position;
+                }
+                else
+                {
+                    Application.LoadLevel(Application.loadedLevel);
+                    PlayerScript.health = 10;
+                }
+                
             }
             CurTime = AttackTimer;
         }

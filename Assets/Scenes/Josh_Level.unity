@@ -2906,6 +2906,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &96869963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -6166,7 +6167,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh129032
+  m_Name: pb_Mesh-4906
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6471,6 +6472,7 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &270101644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4530880045128832, guid: d0e2b6bf944e12c439220558bf7de75a,
@@ -6746,6 +6748,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &299671820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -7069,7 +7072,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh131948
+  m_Name: pb_Mesh-2854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11951,6 +11954,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 497906175}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &408243419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
+    type: 3}
+  m_PrefabInstance: {fileID: 785932801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &410214395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4965331073510626, guid: 2623fcc4ae72bed4681324fdc889e468,
@@ -12306,7 +12315,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh132762
+  m_Name: pb_Mesh-2546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17226,7 +17235,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135378
+  m_Name: pb_Mesh17014
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40653,6 +40662,7 @@ MonoBehaviour:
   AttackTimer: 0.5
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &843150547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4530880045128832, guid: d0e2b6bf944e12c439220558bf7de75a,
@@ -54713,6 +54723,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &1242102239 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -63194,6 +63205,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &1423508330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -63352,7 +63364,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134802
+  m_Name: pb_Mesh-5168
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -76780,7 +76792,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh132876
+  m_Name: pb_Mesh-2126
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -78724,6 +78736,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &1711065769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248125747219890, guid: 614ae078bc54b724ba88e5ad5fcf173f,
@@ -81776,7 +81789,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135332
+  m_Name: pb_Mesh-2866
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -86009,7 +86022,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134238
+  m_Name: pb_Mesh-4894
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91489,7 +91502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh130406
+  m_Name: pb_Mesh-5180
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91863,6 +91876,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &1945150870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248125747219890, guid: 614ae078bc54b724ba88e5ad5fcf173f,
@@ -93860,7 +93874,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh132128
+  m_Name: pb_Mesh-2558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -95988,6 +96002,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  teleportDestination: {fileID: 408243419}
 --- !u!4 &2028924538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -98185,7 +98200,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh134098
+  m_Name: pb_Mesh-2138
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
