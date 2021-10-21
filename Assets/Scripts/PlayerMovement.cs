@@ -147,8 +147,10 @@ public class PlayerMovement : MonoBehaviour
 
 
     //Update various conditions per frame
-    private void Update()
+    private void FixedUpdate()
     {
+        MovePlayer();
+
         //isOnFloor = Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight / 2 + 0.5f);
         //isOnFloor = Physics.CheckSphere(transform.position - new Vector3(0, 0.5f, 0), floorDistcance,floorMask); //constant check for collision with "floor"
         isOnFloor = OnFloor();
@@ -256,11 +258,6 @@ public class PlayerMovement : MonoBehaviour
         slopeMovementDirection = Vector3.ProjectOnPlane(movementDirection, slopeHit.normal); // used in slope detection
     }
 
-    //updates alongside physics engine
-    private void FixedUpdate() 
-    {
-        MovePlayer();
-    }
 
     //receive input from keys WASD
     void PlayerInput()

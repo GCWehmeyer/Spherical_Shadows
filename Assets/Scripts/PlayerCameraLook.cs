@@ -16,7 +16,7 @@ public class PlayerCameraLook : MonoBehaviour
     float mouseY;
     float controllerX;
     float controllerY;
-    public float sensitivityMultiplier = 0.03f;
+    public float sensitivityMultiplier = 0.02f;
     float xRotation;
     float yRotation;
 
@@ -29,7 +29,7 @@ public class PlayerCameraLook : MonoBehaviour
         Cursor.visible = false; //used to hide cursor
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         PlayerInput();
         //adjusts the camera object to the input
