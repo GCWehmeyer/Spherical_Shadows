@@ -1477,7 +1477,7 @@ MonoBehaviour:
   dashKeyController: 333
   walkKeyController: 331
   walkKey: 306
-  resetKey: 114
+  resetKey: 112
   floorMask:
     serializedVersion: 2
     m_Bits: 256
@@ -9188,6 +9188,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 529806420655406728}
+    - target: {fileID: 9103783026248682242, guid: 43d5025425d563548843fc9af5f1e432,
+        type: 3}
+      propertyPath: resetKey
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 9103783026248682242, guid: 43d5025425d563548843fc9af5f1e432,
         type: 3}
       propertyPath: playerCam
