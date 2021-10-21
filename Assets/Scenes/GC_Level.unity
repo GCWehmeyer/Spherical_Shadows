@@ -127,7 +127,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-62492
+  m_Name: pb_Mesh-18626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4204,7 +4204,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41726
+  m_Name: pb_Mesh26270
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4697,7 +4697,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41222
+  m_Name: pb_Mesh25732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5128,7 +5128,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh41568
+  m_Name: pb_Mesh26102
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5858,9 +5858,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &361026531
 GameObject:
   m_ObjectHideFlags: 0
@@ -9021,9 +9022,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &581813270
 GameObject:
   m_ObjectHideFlags: 0
@@ -12867,12 +12869,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 6
+  Speed: 3
   GoToDistance: 10
   AttackDistance: 8
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!43 &768968388
 Mesh:
   m_ObjectHideFlags: 0
@@ -30911,9 +30914,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!4 &972924531 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 411868, guid: 26f7afb3718727245a184c5904ea5cfa,
@@ -32611,9 +32615,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1107151201
 GameObject:
   m_ObjectHideFlags: 0
@@ -35271,12 +35276,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 6
+  Speed: 3
   GoToDistance: 10
   AttackDistance: 8
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1001 &1260089797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35359,12 +35365,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurState: 0
-  Speed: 6
+  Speed: 3
   GoToDistance: 10
   AttackDistance: 8
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!4 &1268133949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
@@ -36304,6 +36311,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!4 &1399572818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464268, guid: 83a919b0e630c394780833b59a51ab4f,
@@ -36570,94 +36578,6 @@ Transform:
   m_Father: {fileID: 976488663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1486104584
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1868461831}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_Name
-      value: Guardian5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 53.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 23.878633
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18c800137884f7e41a1c548b743d113b, type: 3}
---- !u!4 &1486104585 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 18c800137884f7e41a1c548b743d113b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1486104584}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1486104586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 18c800137884f7e41a1c548b743d113b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1486104584}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1486104587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1486104586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b877f00b9047746ae4e3a690084d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurState: 0
-  Speed: 6
-  GoToDistance: 10
-  AttackDistance: 8
-  AttackTimer: 2
-  PlayerTag: Player
-  healthBar: {fileID: 2040803341}
 --- !u!1001 &1486323677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36743,9 +36663,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1493536246
 GameObject:
   m_ObjectHideFlags: 0
@@ -38231,7 +38152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6, type: 3}
       propertyPath: m_LocalScale.x
@@ -38318,6 +38239,7 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1001 &1600207251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38798,9 +38720,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1638754854
 GameObject:
   m_ObjectHideFlags: 0
@@ -39430,9 +39353,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1717658112
 GameObject:
   m_ObjectHideFlags: 0
@@ -40804,7 +40728,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-62480
+  m_Name: pb_Mesh-18614
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -40996,7 +40920,6 @@ Transform:
   - {fileID: 1254198263}
   - {fileID: 1260089798}
   - {fileID: 358933945}
-  - {fileID: 1486104585}
   - {fileID: 1599979928}
   m_Father: {fileID: 858919038}
   m_RootOrder: 2
@@ -41496,9 +41419,10 @@ MonoBehaviour:
   Speed: 6
   GoToDistance: 10
   AttackDistance: 8
-  AttackTimer: 2
+  AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  teleportDestination: {fileID: 0}
 --- !u!1 &1932087637
 GameObject:
   m_ObjectHideFlags: 0
