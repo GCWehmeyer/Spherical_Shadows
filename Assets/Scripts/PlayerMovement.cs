@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] KeyCode dashKeyController = KeyCode.JoystickButton3; // Y
     [SerializeField] KeyCode walkKeyController = KeyCode.JoystickButton1; // B
     [SerializeField] KeyCode walkKey = KeyCode.LeftControl;
-    [SerializeField] KeyCode resetKey = KeyCode.R;
+    [SerializeField] KeyCode resetKey = KeyCode.P;
     //[SerializeField] KeyCode resetKeyController = KeyCode.JoystickButton6;
 
 
