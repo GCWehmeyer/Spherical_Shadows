@@ -109,13 +109,14 @@ public class Enemy : MonoBehaviour
                 if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
                     PlayerScript.health = 10;
-                    healthBar.getHealth(100);
+                    healthBar.SetHealth(100);
                     Target.transform.position = teleportDestination.position;
                 }
                 else
                 {
                     Application.LoadLevel(Application.loadedLevel);
                     PlayerScript.health = 10;
+                    healthBar.SetHealth(100);
                 }
                 
             }
