@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Slider slider;
-    public int maxHealth;                    //initialize Max health
-    public int currentHealth;                //Initialize current health   
+    public int maxHealth;                   //initialize Max health
+    public int currentHealth;                //Initialize current health
+    public int health = 100;
 
     public void takeDamage(int damage)
     {

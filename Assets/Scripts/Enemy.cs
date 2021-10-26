@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     private Transform Target;
     public string PlayerTag = "Player";
     private float CurTime;
-    private PlayerMovement PlayerScript;  
+    private PlayerMovement PlayerScript;
     public HealthBar healthBar;                   //Include HealthBar
     [SerializeField] public Transform teleportDestination;
 
@@ -99,24 +99,24 @@ public class Enemy : MonoBehaviour
         CurTime -= Time.deltaTime;
         if (CurTime < 0)
         {
-            if (PlayerScript.health > 0)
+            if (healthBar.health > 0)
             {
-                PlayerScript.health--;
+                healthBar.health -= 10;
                 healthBar.takeDamage(10);
             }
             else
             {
                 if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
-                    PlayerScript.health = 10;
+                    healthBar.health = 100;
                     healthBar.SetHealth(100);
                     Target.transform.position = teleportDestination.position;
                 }
                 else
                 {
                     Application.LoadLevel(Application.loadedLevel);
-                    PlayerScript.health = 10;
                     healthBar.SetHealth(100);
+                    healthBar.health = 100;
                 }
                 
             }

@@ -21,9 +21,9 @@ public class AddHealth : MonoBehaviour
     {
         if (other.tag == "Player") // Ensures only the player can trigger the teleportation
         {
-            if(PlayerScript.health < 10)
+            if(healthBar.health < 100)
             {
-                PlayerScript.health++;
+                healthBar.health+=10;
                 healthBar.getHealth(10);
             }
             
