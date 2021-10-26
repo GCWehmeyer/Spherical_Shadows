@@ -16,7 +16,7 @@ public class Credits : MonoBehaviour
     {
         if ((Input.GetKeyDown(end) || Input.GetKeyDown(endCont)))//can only jump if on floor
         {
-            SceneManager.LoadScene(0);
+            Application.Quit();
         }
     }
 }
