@@ -7,6 +7,7 @@ public class AddHealth : MonoBehaviour
     private Transform Target;
     public HealthBar healthBar;
     private PlayerMovement PlayerScript;
+    public Player player;
 
     private void Start()
     {

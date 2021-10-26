@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour
     private float CurTime;
     private PlayerMovement PlayerScript;  
     public HealthBar healthBar;                   //Include HealthBar
+    public Player player;                          //Included player class
     [SerializeField] public Transform teleportDestination;
 
     // Start is called before the first frame update
@@ -52,7 +53,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void LookFor()
+    public void LookFor()
     {
         transform.LookAt(Target);
         if (Vector3.Distance(Target.position, transform.position) < GoToDistance)
@@ -61,7 +62,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void GoTo()
+    public void GoTo()
     {       
         transform.LookAt(Target);
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -93,7 +94,7 @@ public class Enemy : MonoBehaviour
     }
 
     [System.Obsolete]
-    void Attack()
+    public void Attack()
     { 
         transform.LookAt(Target);
         CurTime -= Time.deltaTime;
@@ -109,14 +110,14 @@ public class Enemy : MonoBehaviour
                 if (SceneManager.GetActiveScene().buildIndex == 1)
                 {
                     PlayerScript.health = 10;
-                    healthBar.SetHealth(100);
+                    //healthBar.SetHealth(100);
                     Target.transform.position = teleportDestination.position;
                 }
                 else
                 {
                     Application.LoadLevel(Application.loadedLevel);
                     PlayerScript.health = 10;
-                    healthBar.SetHealth(100);
+                    //healthBar.SetHealth(100);
                 }
                 
             }
