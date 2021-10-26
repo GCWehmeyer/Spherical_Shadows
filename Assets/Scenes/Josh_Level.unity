@@ -6374,7 +6374,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  player: {fileID: 0}
   teleportDestination: {fileID: 408243419}
+  playerChar: {fileID: 1824431544}
 --- !u!4 &270101644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4530880045128832, guid: d0e2b6bf944e12c439220558bf7de75a,
@@ -6650,7 +6652,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  player: {fileID: 0}
   teleportDestination: {fileID: 408243419}
+  playerChar: {fileID: 1824431544}
 --- !u!4 &299671820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -18054,7 +18058,7 @@ PrefabInstance:
     - target: {fileID: 8078541007605629047, guid: f131d2d4c3dc0094eb9a2c5534bf9d25,
         type: 3}
       propertyPath: m_text
-      value: Remember to crouch with 'C'
+      value: Remember to crouch with 'Ctrl'
       objectReference: {fileID: 0}
     - target: {fileID: 8396040312161005507, guid: f131d2d4c3dc0094eb9a2c5534bf9d25,
         type: 3}
@@ -36779,7 +36783,7 @@ PrefabInstance:
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.065
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 836290354953091708, guid: 188b0ef99c87e5e4c9f5892a031dce77,
         type: 3}
@@ -40560,7 +40564,9 @@ MonoBehaviour:
   AttackTimer: 0.5
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  player: {fileID: 0}
   teleportDestination: {fileID: 408243419}
+  playerChar: {fileID: 1824431544}
 --- !u!4 &843150547 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4530880045128832, guid: d0e2b6bf944e12c439220558bf7de75a,
@@ -62888,7 +62894,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  player: {fileID: 0}
   teleportDestination: {fileID: 408243419}
+  playerChar: {fileID: 1824431544}
 --- !u!4 &1423508330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4867624584437994, guid: beb24022f1709b04e81298f9a1fbeca6,
@@ -80422,7 +80430,7 @@ PrefabInstance:
         Let us
         know at our helpline:
 
-        www.SphereicalShadows.com'
+        https://josh-scg.itch.io/puzzle-ball-spherical-shadows'
       objectReference: {fileID: 0}
     - target: {fileID: 8078541007605629047, guid: f131d2d4c3dc0094eb9a2c5534bf9d25,
         type: 3}
@@ -91527,7 +91535,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 1375573829}
+  player: {fileID: 0}
   teleportDestination: {fileID: 408243419}
+  playerChar: {fileID: 1824431544}
 --- !u!4 &1945150870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4248125747219890, guid: 614ae078bc54b724ba88e5ad5fcf173f,

@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
     public HealthBar healthBar;                   //Include HealthBar
     public Player player;                          //Included player class
     [SerializeField] public Transform teleportDestination;
+    [SerializeField] public GameObject playerChar;
 
     // Start is called before the first frame update
     [System.Obsolete]
@@ -111,7 +112,7 @@ public class Enemy : MonoBehaviour
                 {
                     healthBar.health = 100;
                     healthBar.SetHealth(100);
-                    Target.transform.position = teleportDestination.position;
+                    playerChar.transform.position = teleportDestination.position;
                 }
                 else
                 {

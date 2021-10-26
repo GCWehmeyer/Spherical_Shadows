@@ -5888,7 +5888,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &361026531
 GameObject:
   m_ObjectHideFlags: 0
@@ -9052,7 +9054,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &581813270
 GameObject:
   m_ObjectHideFlags: 0
@@ -13095,7 +13099,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!43 &768968388
 Mesh:
   m_ObjectHideFlags: 0
@@ -31402,7 +31408,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1001 &964981848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33030,7 +33038,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &1107151201
 GameObject:
   m_ObjectHideFlags: 0
@@ -35694,7 +35704,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1001 &1260089797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35783,7 +35795,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!4 &1268133949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
@@ -36723,7 +36737,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!4 &1399572818 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 464268, guid: 83a919b0e630c394780833b59a51ab4f,
@@ -37078,7 +37094,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &1493536246
 GameObject:
   m_ObjectHideFlags: 0
@@ -38387,8 +38405,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2, y: 1, z: 1.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.2523037, y: 1, z: 1.2}
+  m_Center: {x: -0.026151836, y: 0, z: 0}
 --- !u!23 &1579264517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38651,7 +38669,9 @@ MonoBehaviour:
   AttackTimer: 2
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1001 &1600207251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39135,7 +39155,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &1638754854
 GameObject:
   m_ObjectHideFlags: 0
@@ -39768,7 +39790,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &1717658112
 GameObject:
   m_ObjectHideFlags: 0
@@ -41834,7 +41858,9 @@ MonoBehaviour:
   AttackTimer: 1
   PlayerTag: Player
   healthBar: {fileID: 2040803341}
+  player: {fileID: 0}
   teleportDestination: {fileID: 0}
+  playerChar: {fileID: 0}
 --- !u!1 &1932087637
 GameObject:
   m_ObjectHideFlags: 0
